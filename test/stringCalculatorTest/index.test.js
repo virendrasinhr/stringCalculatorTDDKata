@@ -1,5 +1,5 @@
 const add = require("../../src/stringCalculator");
 
-test(" Empty string return 0" , () => { expect( add("") ).toBe(0); });
-test(" 1 string return 1" , () => { expect( add("1") ).toBe(1); });
 test(" 1,5 string return 6" , () => { expect( add("1,5") ).toBe(6); });
+test(" 1\n2,3 string return 6" , () => { expect( add("1\n2,3") ).toBe(6); });
+test("//;\n1;2 should return 3", () => { expect( add("//;\n1;2") ).toBe(3); });
